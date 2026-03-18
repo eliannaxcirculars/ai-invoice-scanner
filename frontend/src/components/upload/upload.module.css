@@ -1,0 +1,213 @@
+/* Upload components shared styles */
+
+/* ─── Sección contenedora ─── */
+.uploaderSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ─── Drop Zone ─── */
+.dropZone {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.dropZone:hover,
+.dropZone:focus-visible {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  outline: none;
+}
+
+.dragging {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  transform: scale(1.01);
+}
+
+.dropIcon {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.dropTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.dropSubtitle {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.dropLink {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dropHint {
+  font-size: 0.8125rem;
+  color: var(--color-text-subtle);
+  margin: 0.25rem 0 0;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+/* ─── Área con archivo seleccionado ─── */
+.selectedFileArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ─── Preview card ─── */
+.previewCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.previewMedia {
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previewPdfIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.125rem;
+  color: var(--color-error);
+}
+
+.previewPdfLabel {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.previewInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.previewFileName {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.previewFileMeta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.previewRemoveBtn {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.previewRemoveBtn:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+  background: var(--color-error-subtle);
+}
+
+/* ─── Progress Bar ─── */
+.progressWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 0.5rem;
+  background: var(--color-border);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
+  border-radius: 9999px;
+  transition: width 0.3s ease;
+}
+
+.progressLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 2.5rem;
+  text-align: right;
+}
+
+/* ─── Action row ─── */
+.actionRow {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* ─── Error ─── */
+.errorMessage {
+  font-size: 0.875rem;
+  color: var(--color-error);
+  background: var(--color-error-subtle);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 0.875rem;
+  margin: 0;
+}

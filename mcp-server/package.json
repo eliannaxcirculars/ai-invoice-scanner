@@ -1,0 +1,14 @@
+{
+  "name": "invoice-scanner-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for AI Invoice Scanner — exposes invoice tools to Claude",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@supabase/supabase-js": "^2.49.4"
+  }
+}
