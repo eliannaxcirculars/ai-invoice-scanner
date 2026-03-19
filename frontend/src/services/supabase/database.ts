@@ -90,6 +90,7 @@ export async function saveInvoice(
   if (invoice.items.length > 0) {
     const itemRows = invoice.items.map((item) => ({
       invoice_id: savedInvoice.id,
+      name: item.description,
       description: item.description,
       quantity: item.quantity,
       unit_price: item.unitPrice,
